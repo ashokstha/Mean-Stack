@@ -6,7 +6,7 @@
       type="text"
       name="title"
       placeholder="Post Title"
-      ngModel
+      [ngModel]="post.title"
       required
       #title="ngModel"/>
       <mat-error *ngIf="title.invalid"> Please enter the title. </mat-error>
@@ -18,7 +18,7 @@
       rows="6"
       name="content"
       placeholder="Post Content"
-      ngModel
+      [ngModel]="post.content"
       required
       #content="ngModel"></textarea>
       <mat-error *ngIf="content.invalid"> Please enter the content. </mat-error>
